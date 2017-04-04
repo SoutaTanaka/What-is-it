@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Whatisit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WhatisitTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-WhatisitUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0C79BFB7EFB74C18879A956A5ED1CA1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C87DED2279C40D0CE8114B95F1F12DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92BB131FA876445E027D20AE23EA7B5F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2B7DF0A77E41B073DB31CE0E6EA2F37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3D443ED827AB408821E69E9E7DB1123</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

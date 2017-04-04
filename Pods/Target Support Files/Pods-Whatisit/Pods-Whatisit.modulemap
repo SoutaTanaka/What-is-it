@@ -1,0 +1,6 @@
+framework module Pods_Whatisit {
+  umbrella header "Pods-Whatisit-umbrella.h"
+
+  export *
+  module * { export * }
+}
