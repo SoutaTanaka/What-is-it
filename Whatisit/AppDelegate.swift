@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        
         FIRApp.configure()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511");
         //  GADMobileAds.configure(withApplicationID: "ca-app-pub-4903713163214848~6575041015");

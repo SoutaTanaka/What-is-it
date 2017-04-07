@@ -11,7 +11,7 @@ import Photos
 import SwiftyJSON
 import GoogleMobileAds
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, GADInterstitialDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, GADInterstitialDelegate, GADNativeExpressAdViewDelegate, GADVideoControllerDelegate {
     //くるくる回るやつ( UIActivityIndicatorView)
     @IBOutlet var activity: UIActivityIndicatorView!
     //表示するイメージ
@@ -29,11 +29,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //広告用
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet var adView: GADNativeExpressAdView!
     var interstitial: GADInterstitial!
+    let adUnitId = "ca-app-pub-3940256099942544/8897359316"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         admob()
+        
+        adView.adUnitID = adUnitId
+        adView.rootViewController = self
+        adView.delegate = self
+        let videoOptions = GADVideoOptions()
+        videoOptions.startMuted = true
+        adView.videoController.delegate = self
+        GADRequest().testDevices = [kGADSimulatorID]
+        adView.load(GADRequest())
         
         
         activity.hidesWhenStopped = true
@@ -57,12 +69,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func startimage (){
         self.selectFromCameralole()
         bannerView.load(GADRequest())
+        adView.load(GADRequest())
         
     }
     //写真を撮る
     @IBAction func startphoto () {
         opencamera()
         bannerView.load(GADRequest())
+        adView.load(GADRequest())
     }
     //データを送る
     @IBAction func sendData () {
@@ -80,7 +94,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.interstitial.present(fromRootViewController: self)
                 self.push = 0
             }
-
+            
         }
     }
     
@@ -247,7 +261,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    
-    
-    
+    //    func nativeExpressAdViewDidReceiveAd(_ nativeExpressAdView: GADNativeExpressAdView) {
+    //        if adView.videoController.hasVideoContent() {
+    //            print("Received an ad with a video asset.")
+    //        } else {
+    //            print("Received an ad without a video asset.")
+    //        }
+    //    }
+    //    func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {
+    //        print("The video asset has completed playback.")
+    //    }
 }
+
+
+

@@ -23,9 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-Fr-laM">
-                                <rect key="frame" x="61" y="84" width="253" height="250"/>
+                                <rect key="frame" x="62.5" y="84" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="253" id="J0W-dY-Pte"/>
+                                    <constraint firstAttribute="width" constant="250" id="J0W-dY-Pte"/>
                                     <constraint firstAttribute="height" constant="250" id="Rww-Sk-5rC"/>
                                 </constraints>
                             </imageView>
@@ -43,16 +43,24 @@
                                     <constraint firstAttribute="height" constant="20" id="jFv-8v-A4G"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7t-do-B65" customClass="GADNativeExpressAdView">
+                                <rect key="frame" x="0.0" y="414" width="375" height="193"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aoj-Fr-laM" firstAttribute="centerX" secondItem="Wd8-ux-WNm" secondAttribute="centerX" id="5RV-qE-anF"/>
                             <constraint firstItem="nCx-jS-i6q" firstAttribute="centerX" secondItem="Wd8-ux-WNm" secondAttribute="centerX" id="DY7-Q2-D0G"/>
+                            <constraint firstItem="b7t-do-B65" firstAttribute="leading" secondItem="Wd8-ux-WNm" secondAttribute="leading" id="E7A-Cu-0Zj"/>
                             <constraint firstAttribute="trailing" secondItem="jLE-Dl-b76" secondAttribute="trailing" id="Uac-Qs-kDL"/>
+                            <constraint firstItem="jLE-Dl-b76" firstAttribute="top" secondItem="b7t-do-B65" secondAttribute="bottom" id="Wd0-sn-aGt"/>
+                            <constraint firstItem="b7t-do-B65" firstAttribute="top" secondItem="nCx-jS-i6q" secondAttribute="bottom" constant="20" id="byy-UD-VVf"/>
                             <constraint firstItem="jLE-Dl-b76" firstAttribute="leading" secondItem="Wd8-ux-WNm" secondAttribute="leading" id="dIF-Tp-L9d"/>
                             <constraint firstItem="fa1-mJ-n5E" firstAttribute="top" secondItem="jLE-Dl-b76" secondAttribute="bottom" id="uBi-MS-Cfx"/>
                             <constraint firstItem="nCx-jS-i6q" firstAttribute="top" secondItem="aoj-Fr-laM" secondAttribute="bottom" constant="40" id="vdb-O0-UCq"/>
                             <constraint firstItem="aoj-Fr-laM" firstAttribute="top" secondItem="c2K-9Y-avs" secondAttribute="bottom" constant="20" id="x2C-Sr-csj"/>
+                            <constraint firstAttribute="trailing" secondItem="b7t-do-B65" secondAttribute="trailing" id="ybd-P1-T4A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cpj-6g-WVx">
@@ -76,6 +84,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activity" destination="nCx-jS-i6q" id="T01-IA-N5e"/>
+                        <outlet property="adView" destination="b7t-do-B65" id="foa-3j-3aC"/>
                         <outlet property="bannerView" destination="jLE-Dl-b76" id="ZAK-9d-Aa6"/>
                         <outlet property="images" destination="aoj-Fr-laM" id="ifX-85-RL4"/>
                         <segue destination="epE-zC-DUM" kind="show" identifier="result" id="NSI-wZ-Jph"/>
@@ -83,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1M5-tM-rYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81" y="9"/>
+            <point key="canvasLocation" x="-82.400000000000006" y="8.5457271364317844"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="MgJ-lv-Dqe">
@@ -123,7 +132,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgs-8C-ta0">
-                                                    <rect key="frame" x="92" y="8" width="190" height="24"/>
+                                                    <rect key="frame" x="92" y="8" width="275" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -194,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIi-md-IXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="9"/>
+            <point key="canvasLocation" x="717.60000000000002" y="8.5457271364317844"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M1C-dx-4dD">
