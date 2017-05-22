@@ -141,7 +141,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // API呼び出し準備
-        let APIKey = "0e2b258a7464b736c81feaf313de6f19bd5ced06" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
+        let APIKey = "6868e5f2ab3bcc2d57879bd91bfcc8fe9e8a2b09" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
         let url = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + APIKey + "&version=2016-05-20"
         guard let destURL = URL(string: url) else {
             print ("url is NG: " + url) // debugF

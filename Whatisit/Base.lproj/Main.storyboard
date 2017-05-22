@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wNQ-zi-Y3m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wNQ-zi-Y3m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,23 +44,23 @@
                                 </constraints>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7t-do-B65" customClass="GADNativeExpressAdView">
-                                <rect key="frame" x="0.0" y="414" width="375" height="193"/>
+                                <rect key="frame" x="40" y="414" width="295" height="173"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.87058823529411766" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aoj-Fr-laM" firstAttribute="centerX" secondItem="Wd8-ux-WNm" secondAttribute="centerX" id="5RV-qE-anF"/>
+                            <constraint firstItem="b7t-do-B65" firstAttribute="top" secondItem="nCx-jS-i6q" secondAttribute="bottom" constant="20" id="5nS-g1-sak"/>
                             <constraint firstItem="nCx-jS-i6q" firstAttribute="centerX" secondItem="Wd8-ux-WNm" secondAttribute="centerX" id="DY7-Q2-D0G"/>
-                            <constraint firstItem="b7t-do-B65" firstAttribute="leading" secondItem="Wd8-ux-WNm" secondAttribute="leading" id="E7A-Cu-0Zj"/>
                             <constraint firstAttribute="trailing" secondItem="jLE-Dl-b76" secondAttribute="trailing" id="Uac-Qs-kDL"/>
-                            <constraint firstItem="jLE-Dl-b76" firstAttribute="top" secondItem="b7t-do-B65" secondAttribute="bottom" id="Wd0-sn-aGt"/>
-                            <constraint firstItem="b7t-do-B65" firstAttribute="top" secondItem="nCx-jS-i6q" secondAttribute="bottom" constant="20" id="byy-UD-VVf"/>
+                            <constraint firstItem="jLE-Dl-b76" firstAttribute="top" secondItem="b7t-do-B65" secondAttribute="bottom" constant="20" id="Zp3-bg-Swa"/>
                             <constraint firstItem="jLE-Dl-b76" firstAttribute="leading" secondItem="Wd8-ux-WNm" secondAttribute="leading" id="dIF-Tp-L9d"/>
+                            <constraint firstItem="b7t-do-B65" firstAttribute="leading" secondItem="Wd8-ux-WNm" secondAttribute="leading" constant="40" id="qo4-hV-dQI"/>
                             <constraint firstItem="fa1-mJ-n5E" firstAttribute="top" secondItem="jLE-Dl-b76" secondAttribute="bottom" id="uBi-MS-Cfx"/>
                             <constraint firstItem="nCx-jS-i6q" firstAttribute="top" secondItem="aoj-Fr-laM" secondAttribute="bottom" constant="40" id="vdb-O0-UCq"/>
                             <constraint firstItem="aoj-Fr-laM" firstAttribute="top" secondItem="c2K-9Y-avs" secondAttribute="bottom" constant="20" id="x2C-Sr-csj"/>
-                            <constraint firstAttribute="trailing" secondItem="b7t-do-B65" secondAttribute="trailing" id="ybd-P1-T4A"/>
+                            <constraint firstAttribute="trailing" secondItem="b7t-do-B65" secondAttribute="trailing" constant="40" id="xQE-t9-RAc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cpj-6g-WVx">
@@ -121,10 +121,10 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-d1-Hv9">
-                                <rect key="frame" x="0.0" y="334" width="375" height="273"/>
+                                <rect key="frame" x="0.0" y="344" width="375" height="263"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="75" id="DP3-xD-As8" userLabel="MyCell" customClass="CustomTableViewCell" customModule="Whatisit" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="75" id="DP3-xD-As8" userLabel="MyCell" customClass="CustomTableViewCell" customModule="Whatisit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DP3-xD-As8" id="XFw-og-37r">
@@ -168,6 +168,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.69803921570000005" green="0.87058823529999996" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="info" destination="Rgs-8C-ta0" id="oqG-SZ-1Ol"/>
                                             <outlet property="sc" destination="CvC-iy-Fv8" id="FLX-Cg-41b"/>
@@ -180,14 +181,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.69803921568627447" green="0.87058823529411766" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pQv-d1-Hv9" firstAttribute="leading" secondItem="TN5-dw-Fd8" secondAttribute="leading" id="6zF-RX-2jU"/>
                             <constraint firstItem="vjH-AZ-9U3" firstAttribute="centerX" secondItem="TN5-dw-Fd8" secondAttribute="centerX" id="8E0-VG-men"/>
                             <constraint firstItem="Kci-Yi-YvG" firstAttribute="top" secondItem="5lG-5o-M8L" secondAttribute="bottom" id="8VF-bZ-y0F"/>
                             <constraint firstAttribute="trailing" secondItem="pQv-d1-Hv9" secondAttribute="trailing" id="HzY-hd-Tgn"/>
                             <constraint firstItem="vjH-AZ-9U3" firstAttribute="top" secondItem="z4a-CS-43Z" secondAttribute="bottom" constant="20" id="IfO-6e-SxW"/>
-                            <constraint firstItem="pQv-d1-Hv9" firstAttribute="top" secondItem="vjH-AZ-9U3" secondAttribute="bottom" id="SRz-mJ-8hI"/>
+                            <constraint firstItem="pQv-d1-Hv9" firstAttribute="top" secondItem="vjH-AZ-9U3" secondAttribute="bottom" constant="10" id="SRz-mJ-8hI"/>
                             <constraint firstAttribute="trailing" secondItem="5lG-5o-M8L" secondAttribute="trailing" id="VC9-hi-JE7"/>
                             <constraint firstItem="pQv-d1-Hv9" firstAttribute="centerX" secondItem="TN5-dw-Fd8" secondAttribute="centerX" id="koM-Iw-HB4"/>
                             <constraint firstItem="5lG-5o-M8L" firstAttribute="leading" secondItem="TN5-dw-Fd8" secondAttribute="leading" id="oBm-Xn-WYJ"/>
@@ -203,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIi-md-IXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717.60000000000002" y="8.5457271364317844"/>
+            <point key="canvasLocation" x="626" y="9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M1C-dx-4dD">

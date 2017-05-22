@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import SafariServices
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -17,9 +18,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     var infom: [String] = []
     var proba: [String] = []
     var images: UIImage!
+    var word: String!
+    var number:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        word = "Helloc"
         
         
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -48,5 +52,18 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.info.text = infom[indexPath.row]
         cell.sc.text = proba[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        number = indexPath.row
+        word = infom[number]
+        if let worde = word.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed ) {
+            let url = NSURL(string:"https://www.google.co.jp/search?q=" + worde)
+            if let url = url {
+                let safariViewController = SFSafariViewController(url: url as URL)
+                present(safariViewController, animated: false, completion: nil)
+            }
+
+        }
+        tableView.reloadData()
     }
 }

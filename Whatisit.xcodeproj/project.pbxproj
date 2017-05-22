@@ -16,8 +16,10 @@
 		051F92C21E922AE90085F340 /* WhatisitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051F92C11E922AE90085F340 /* WhatisitUITests.swift */; };
 		051F92D01E922C7A0085F340 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */; };
 		05339C5E1E936E4C0034C623 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */; };
+		0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0533BFA31ED2AF1200143854 /* 名称未設定-3.png */; };
 		056286051E94D59F0053B3BD /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 056286041E94D59F0053B3BD /* ios */; };
 		05DD3E451E937A1B004BF1E6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD3E441E937A1B004BF1E6 /* TableViewController.swift */; };
+		05F87B1B1ECC5B520013A500 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F87B1A1ECC5B520013A500 /* SafariServices.framework */; };
 		5A767EEA876ED5E9AEC6B708 /* Pods_WhatisitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD72AEA9BB3C1B674C16C9EF /* Pods_WhatisitUITests.framework */; };
 		63ACAB810C7C8747988E2BF7 /* Pods_WhatisitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F8D1F8AC9084D065A3F938 /* Pods_WhatisitTests.framework */; };
 		6B73F4A4DB954ED16A4FDCC0 /* Pods_Whatisit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B8A8842206AA6CAC1AD48 /* Pods_Whatisit.framework */; };
@@ -56,8 +58,10 @@
 		051F92C31E922AE90085F340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		0533BFA31ED2AF1200143854 /* 名称未設定-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "名称未設定-3.png"; sourceTree = "<group>"; };
 		056286041E94D59F0053B3BD /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		05DD3E441E937A1B004BF1E6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		05F87B1A1ECC5B520013A500 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		0F49527E375B56D1149E1776 /* Pods-Whatisit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatisit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whatisit/Pods-Whatisit.debug.xcconfig"; sourceTree = "<group>"; };
 		356B8A8842206AA6CAC1AD48 /* Pods_Whatisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whatisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6E68B28634E59CCA2641B3 /* Pods-WhatisitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatisitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatisitTests/Pods-WhatisitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F87B1B1ECC5B520013A500 /* SafariServices.framework in Frameworks */,
 				6B73F4A4DB954ED16A4FDCC0 /* Pods_Whatisit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +127,7 @@
 		051F92A01E922AE90085F340 /* Whatisit */ = {
 			isa = PBXGroup;
 			children = (
+				0533BFA31ED2AF1200143854 /* 名称未設定-3.png */,
 				056286041E94D59F0053B3BD /* ios */,
 				051F92A11E922AE90085F340 /* AppDelegate.swift */,
 				051F92A31E922AE90085F340 /* ViewController.swift */,
@@ -170,6 +176,7 @@
 		F297944A41427285B4EAB56E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05F87B1A1ECC5B520013A500 /* SafariServices.framework */,
 				356B8A8842206AA6CAC1AD48 /* Pods_Whatisit.framework */,
 				C7F8D1F8AC9084D065A3F938 /* Pods_WhatisitTests.framework */,
 				FD72AEA9BB3C1B674C16C9EF /* Pods_WhatisitUITests.framework */,
@@ -293,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */,
 				051F92AC1E922AE90085F340 /* LaunchScreen.storyboard in Resources */,
 				051F92D01E922C7A0085F340 /* GoogleService-Info.plist in Resources */,
 				051F92A91E922AE90085F340 /* Assets.xcassets in Resources */,
