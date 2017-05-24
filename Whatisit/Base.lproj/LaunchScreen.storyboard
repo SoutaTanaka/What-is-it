@@ -21,12 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="名称未設定-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2s-LT-cTv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="名称未設定-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2s-LT-cTv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C2s-LT-cTv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BBq-fF-Nhj"/>
+                            <constraint firstAttribute="trailing" secondItem="C2s-LT-cTv" secondAttribute="trailing" id="Di6-XJ-GgY"/>
+                            <constraint firstItem="C2s-LT-cTv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gcr-cR-0LJ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="C2s-LT-cTv" secondAttribute="bottom" id="z7F-Py-afL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -28,10 +28,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var probability: [String] = []
     
     //広告用
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet var bannerView: GADBannerView!
     @IBOutlet var adView: GADNativeExpressAdView!
     var interstitial: GADInterstitial!
-    let adUnitId = "ca-app-pub-3940256099942544/8897359316"
+    let adUnitId = "ca-app-pub-4903713163214848/2909356615"
     
     
     override func viewDidLoad() {
@@ -51,8 +51,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activity.hidesWhenStopped = true
         activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         
-        images.image = UIImage(named: "pa")
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        images.image = UIImage(named: "Pleas-Select-Image-UI.png")
+        bannerView.adUnitID = "ca-app-pub-4903713163214848/7339556217"
         //bannerView.adUnitID = "ca-app-pub-4903713163214848/9528507412"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
@@ -80,7 +80,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     //データを送る
     @IBAction func sendData () {
-        print(swith)
+//        print(swith)
         if swith == true {
             swith = false
             activity.startAnimating()
@@ -90,7 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //   self.textView.text = ""
             push = push + 1
             
-            if self.push == 5 {
+            if self.push == 3 {
                 self.interstitial.present(fromRootViewController: self)
                 self.push = 0
             }
@@ -136,19 +136,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //IBMにデータを送信するプログラムに関しての記述。
     func callApi(image: UIImage) {
-        // print ("canSendData")
+         print ("canSendData")
         // 解析結果はAppDelegateの変数を経由してSubViewに渡す
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // API呼び出し準備
-        let APIKey = "6868e5f2ab3bcc2d57879bd91bfcc8fe9e8a2b09" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
+        let APIKey = "ff8f40dcd5890da6de1d06a2667796ce56cb969f" // APIKeyを取得してここに記述  
         let url = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + APIKey + "&version=2016-05-20"
         guard let destURL = URL(string: url) else {
             print ("url is NG: " + url) // debugF
             return
         }
         var request = URLRequest(url: destURL)
-        request.httpMethod = "POST"
+//        request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpBody = UIImageJPEGRepresentation(image, 1)
         
@@ -169,10 +169,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     {
                         // APIレスポンス：正常
                         let json = JSON(data: data!)
-                        //print(json)
+                        print(json)
                         
-                        //print(json["images_processed"])
-                        //                print(json.dictionaryValue)
+                        print(json["images_processed"])
+                                        print(json.dictionaryValue)
                         
                         //                let jsonDictionary:Dictionary = json.dictionaryValue
                         
@@ -180,7 +180,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         
                         classes["class"] =  json["images"][0]["classifiers"][0]["classes"][0]["class"].string
                         
-                        for i in 0...20 {
+                        for i in 0...50 {
                             
                             let textClasses =  json["images"][0]["classifiers"][0]["classes"][i]["class"].stringValue
                             let textScore = json["images"][0]["classifiers"][0]["classes"][i]["score"].stringValue
@@ -194,16 +194,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                 self.probability.append(String(self.score))
                                 //   self.textView.text  = self.textView.text + "[\(textClasses),\(textScore )],"
                                 // self.textView.text  = "[\(textClasses),\(textScore )],"
-                                // print( "classes[class]:\(classes["class"]!)")
+                                 print( "classes[class]:\(classes["class"]!)")
                                 
                                 dataStr = classes["class"] as! String?
-                                //print( " dataStr:\(String(describing:  dataStr))")
-                                //print( " dataStr:\(String(describing:  dataStr))")
+                                print( " dataStr:\(String(describing:  dataStr))")
+                                print( " dataStr:\(String(describing:  dataStr))")
                             }
                             
                         }
-                        //                        print (self.information)
-                        //                        print(self.probability)
+                                            print (self.information)
+                                            print(self.probability)
                         self.activity.stopAnimating()
                         self.performSegue(withIdentifier: "result", sender: nil)
                         self.swith = true
@@ -221,7 +221,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
             } else {
                 // APIレスポンス：エラー
-                print(error.debugDescription)   // debug
+  print(error.debugDescription)   // debug
             }
         }
         task.resume()
@@ -229,10 +229,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+    //ステータスバー
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
     //広告の関数
     fileprivate func admob() {
         interstitial = createAndLoadInterstitial()
@@ -240,15 +240,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4903713163214848/8955890212")
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        print("end")
-        print(ad)
+    print("end")
+  print(ad)
         interstitial = createAndLoadInterstitial()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

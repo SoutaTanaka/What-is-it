@@ -14,9 +14,10 @@
 		051F92AC1E922AE90085F340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051F92AA1E922AE90085F340 /* LaunchScreen.storyboard */; };
 		051F92B71E922AE90085F340 /* WhatisitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051F92B61E922AE90085F340 /* WhatisitTests.swift */; };
 		051F92C21E922AE90085F340 /* WhatisitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051F92C11E922AE90085F340 /* WhatisitUITests.swift */; };
-		051F92D01E922C7A0085F340 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */; };
 		05339C5E1E936E4C0034C623 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */; };
 		0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0533BFA31ED2AF1200143854 /* 名称未設定-3.png */; };
+		053EA0391ED590CE0045B233 /* Pleas-Select-Image-UI.png in Resources */ = {isa = PBXBuildFile; fileRef = 053EA0381ED590CE0045B233 /* Pleas-Select-Image-UI.png */; };
+		053EA03B1ED5A0620045B233 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 053EA03A1ED5A0620045B233 /* GoogleService-Info.plist */; };
 		056286051E94D59F0053B3BD /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 056286041E94D59F0053B3BD /* ios */; };
 		05DD3E451E937A1B004BF1E6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD3E441E937A1B004BF1E6 /* TableViewController.swift */; };
 		05F87B1B1ECC5B520013A500 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F87B1A1ECC5B520013A500 /* SafariServices.framework */; };
@@ -56,9 +57,10 @@
 		051F92BD1E922AE90085F340 /* WhatisitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatisitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		051F92C11E922AE90085F340 /* WhatisitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatisitUITests.swift; sourceTree = "<group>"; };
 		051F92C31E922AE90085F340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0533BFA31ED2AF1200143854 /* 名称未設定-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "名称未設定-3.png"; sourceTree = "<group>"; };
+		053EA0381ED590CE0045B233 /* Pleas-Select-Image-UI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pleas-Select-Image-UI.png"; sourceTree = "<group>"; };
+		053EA03A1ED5A0620045B233 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		056286041E94D59F0053B3BD /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		05DD3E441E937A1B004BF1E6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05F87B1A1ECC5B520013A500 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -128,14 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				0533BFA31ED2AF1200143854 /* 名称未設定-3.png */,
+				053EA0381ED590CE0045B233 /* Pleas-Select-Image-UI.png */,
 				056286041E94D59F0053B3BD /* ios */,
 				051F92A11E922AE90085F340 /* AppDelegate.swift */,
 				051F92A31E922AE90085F340 /* ViewController.swift */,
 				051F92A51E922AE90085F340 /* Main.storyboard */,
 				051F92A81E922AE90085F340 /* Assets.xcassets */,
 				051F92AA1E922AE90085F340 /* LaunchScreen.storyboard */,
+				053EA03A1ED5A0620045B233 /* GoogleService-Info.plist */,
 				051F92AD1E922AE90085F340 /* Info.plist */,
-				051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */,
 				05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */,
 				05DD3E441E937A1B004BF1E6 /* TableViewController.swift */,
 			);
@@ -302,10 +305,11 @@
 			files = (
 				0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */,
 				051F92AC1E922AE90085F340 /* LaunchScreen.storyboard in Resources */,
-				051F92D01E922C7A0085F340 /* GoogleService-Info.plist in Resources */,
 				051F92A91E922AE90085F340 /* Assets.xcassets in Resources */,
+				053EA0391ED590CE0045B233 /* Pleas-Select-Image-UI.png in Resources */,
 				051F92A71E922AE90085F340 /* Main.storyboard in Resources */,
 				056286051E94D59F0053B3BD /* ios in Resources */,
+				053EA03B1ED5A0620045B233 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

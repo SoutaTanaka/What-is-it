@@ -361,21 +361,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>20F75DC0165EAA0305500412F019BDEB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A98D43B3B4BB77640AFFAF61A573FA7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>FirebaseCore</string>
-			<key>path</key>
-			<string>FirebaseCore</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>21CCCFAF8A8FF2EC07E53C3DD6CED9E0</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -438,6 +423,19 @@
 			<string>PBXHeadersBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>2517B6F9A7FB1A662EB26CE544D6DEF3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FirebaseCoreDiagnostics.framework</string>
+			<key>path</key>
+			<string>Frameworks/FirebaseCoreDiagnostics.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>25360695450925E1C74ADFDCF0AACA24</key>
 		<dict>
@@ -735,19 +733,6 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>3A98D43B3B4BB77640AFFAF61A573FA7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>445F2D555554D72145CDF2FA11F4AC76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>3C87DED2279C40D0CE8114B95F1F12DE</key>
 		<dict>
 			<key>buildConfigurationList</key>
@@ -912,19 +897,6 @@
 			<string>sourcecode.c.h</string>
 			<key>path</key>
 			<string>Pods-WhatisitTests-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>445F2D555554D72145CDF2FA11F4AC76</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>FirebaseCore.framework</string>
-			<key>path</key>
-			<string>Frameworks/FirebaseCore.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1483,6 +1455,19 @@
 			<key>targetProxy</key>
 			<string>27FA02E30F2F67A13A511757530EC56A</string>
 		</dict>
+		<key>7CE259ECC84C3755031FF85479B8FF2C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FirebaseNanoPB.framework</string>
+			<key>path</key>
+			<string>Frameworks/FirebaseNanoPB.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
 			<key>children</key>
@@ -1824,7 +1809,7 @@
 			<array>
 				<string>ABE33D0101BF8BAFB8E072B19304DCCE</string>
 				<string>EC86C059568CB72CF9C11D81ECC6376B</string>
-				<string>20F75DC0165EAA0305500412F019BDEB</string>
+				<string>F6913A96769C068B6234DB7D94D48766</string>
 				<string>91F9CB629FD48AF0908AEA6B9CB5DABA</string>
 				<string>3234B5BE368293E34437DFFE9657184D</string>
 				<string>16A0955D3E94B4C6A077A746FC85609E</string>
@@ -2246,6 +2231,21 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
+		<key>CF1CD981EBF80B62A9EBFE8614D5504C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E98D556B90CCFA9064A9AF54773E7F8E</string>
+				<string>2517B6F9A7FB1A662EB26CE544D6DEF3</string>
+				<string>7CE259ECC84C3755031FF85479B8FF2C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>CFCFC1210CBBEE2CBAB6D2DE5A2285C7</key>
 		<dict>
 			<key>fileRef</key>
@@ -2540,6 +2540,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>E98D556B90CCFA9064A9AF54773E7F8E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FirebaseCore.framework</string>
+			<key>path</key>
+			<string>Frameworks/FirebaseCore.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>EA52F66354E9F71BC37B9128BC55EABF</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -2643,6 +2656,21 @@
 			<string>0958295484AA31C2C7DDAF3C47B2C710</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>F6913A96769C068B6234DB7D94D48766</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CF1CD981EBF80B62A9EBFE8614D5504C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FirebaseCore</string>
+			<key>path</key>
+			<string>FirebaseCore</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F709C74507A3479E64A47BFBBD80E58F</key>
 		<dict>
