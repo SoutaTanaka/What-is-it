@@ -136,7 +136,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //IBMにデータを送信するプログラムに関しての記述。
     func callApi(image: UIImage) {
-         print ("canSendData")
+        // print ("canSendData")
         // 解析結果はAppDelegateの変数を経由してSubViewに渡す
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -169,10 +169,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     {
                         // APIレスポンス：正常
                         let json = JSON(data: data!)
-                        print(json)
+                        //print(json)
                         
-                        print(json["images_processed"])
-                                        print(json.dictionaryValue)
+                        //print(json["images_processed"])
+                        //                print(json.dictionaryValue)
                         
                         //                let jsonDictionary:Dictionary = json.dictionaryValue
                         
@@ -194,16 +194,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                 self.probability.append(String(self.score))
                                 //   self.textView.text  = self.textView.text + "[\(textClasses),\(textScore )],"
                                 // self.textView.text  = "[\(textClasses),\(textScore )],"
-                                 print( "classes[class]:\(classes["class"]!)")
+                                // print( "classes[class]:\(classes["class"]!)")
                                 
                                 dataStr = classes["class"] as! String?
-                                print( " dataStr:\(String(describing:  dataStr))")
-                                print( " dataStr:\(String(describing:  dataStr))")
+                                //print( " dataStr:\(String(describing:  dataStr))")
+                                //print( " dataStr:\(String(describing:  dataStr))")
                             }
                             
                         }
-                                            print (self.information)
-                                            print(self.probability)
+                        //                        print (self.information)
+                        //                        print(self.probability)
                         self.activity.stopAnimating()
                         self.performSegue(withIdentifier: "result", sender: nil)
                         self.swith = true
@@ -221,7 +221,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
             } else {
                 // APIレスポンス：エラー
-  print(error.debugDescription)   // debug
+//                print(error.debugDescription)   // debug
             }
         }
         task.resume()
@@ -247,8 +247,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-    print("end")
-  print(ad)
+//        print("end")
+//        print(ad)
         interstitial = createAndLoadInterstitial()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
