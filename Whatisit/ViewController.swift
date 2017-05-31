@@ -9,9 +9,9 @@
 import UIKit
 import Photos
 import SwiftyJSON
-import GoogleMobileAds
+//import GoogleMobileAds
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, GADInterstitialDelegate, GADNativeExpressAdViewDelegate, GADVideoControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate {//, GADInterstitialDelegate, GADNativeExpressAdViewDelegate, GADVideoControllerDelegate
     //くるくる回るやつ( UIActivityIndicatorView)
     @IBOutlet var activity: UIActivityIndicatorView!
     //表示するイメージ
@@ -28,34 +28,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var probability: [String] = []
     
     //広告用
-    @IBOutlet var bannerView: GADBannerView!
-    @IBOutlet var adView: GADNativeExpressAdView!
-    var interstitial: GADInterstitial!
-    let adUnitId = "ca-app-pub-4903713163214848/2909356615"
+//    @IBOutlet var bannerView: GADBannerView!
+//    @IBOutlet var adView: GADNativeExpressAdView!
+//    var interstitial: GADInterstitial!
+//    let adUnitId = "ca-app-pub-4903713163214848/2909356615"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        admob()
+//        admob()
         
-        adView.adUnitID = adUnitId
-        adView.rootViewController = self
-        adView.delegate = self
-        let videoOptions = GADVideoOptions()
-        videoOptions.startMuted = true
-        adView.videoController.delegate = self
-        GADRequest().testDevices = [kGADSimulatorID]
-        adView.load(GADRequest())
+//        adView.adUnitID = adUnitId
+//        adView.rootViewController = self
+//        adView.delegate = self
+//        let videoOptions = GADVideoOptions()
+//        videoOptions.startMuted = true
+//        adView.videoController.delegate = self
+//        GADRequest().testDevices = [kGADSimulatorID]
+//        adView.load(GADRequest())
         
         
         activity.hidesWhenStopped = true
         activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         
         images.image = UIImage(named: "Pleas-Select-Image-UI.png")
-        bannerView.adUnitID = "ca-app-pub-4903713163214848/7339556217"
+//        bannerView.adUnitID = "ca-app-pub-4903713163214848/7339556217"
         //bannerView.adUnitID = "ca-app-pub-4903713163214848/9528507412"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//        bannerView.rootViewController = self
+//        bannerView.load(GADRequest())
         
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -68,15 +68,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //カメラロールから選ぶ
     @IBAction func startimage (){
         self.selectFromCameralole()
-        bannerView.load(GADRequest())
-        adView.load(GADRequest())
+//        bannerView.load(GADRequest())
+//        adView.load(GADRequest())
         
     }
     //写真を撮る
     @IBAction func startphoto () {
         opencamera()
-        bannerView.load(GADRequest())
-        adView.load(GADRequest())
+//        bannerView.load(GADRequest())
+//        adView.load(GADRequest())
     }
     //データを送る
     @IBAction func sendData () {
@@ -91,7 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             push = push + 1
             
             if self.push == 3 {
-                self.interstitial.present(fromRootViewController: self)
+//                self.interstitial.present(fromRootViewController: self)
                 self.push = 0
             }
             
@@ -141,7 +141,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // API呼び出し準備
-        let APIKey = "ff8f40dcd5890da6de1d06a2667796ce56cb969f" // APIKeyを取得してここに記述  
+        let APIKey = "5656a398aa0fb87b9d95e29473ffe15bb1889ce2" // APIKeyを取得してここに記述  
         let url = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + APIKey + "&version=2016-05-20"
         guard let destURL = URL(string: url) else {
             print ("url is NG: " + url) // debugF
@@ -207,7 +207,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         self.activity.stopAnimating()
                         self.performSegue(withIdentifier: "result", sender: nil)
                         self.swith = true
-                        self.bannerView.load(GADRequest())
+//                        self.bannerView.load(GADRequest())
                     }
                     
                     
@@ -234,23 +234,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        return true
 //    }
     //広告の関数
-    fileprivate func admob() {
-        interstitial = createAndLoadInterstitial()
-        // Set up a new game.
-    }
-    
-    func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4903713163214848/8955890212")
-        interstitial.delegate = self
-        interstitial.load(GADRequest())
-        return interstitial
-    }
-    
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-//        print("end")
-//        print(ad)
-        interstitial = createAndLoadInterstitial()
-    }
+//    fileprivate func admob() {
+//        interstitial = createAndLoadInterstitial()
+//        // Set up a new game.
+//    }
+//    
+//    func createAndLoadInterstitial() -> GADInterstitial {
+//        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4903713163214848/8955890212")
+//        interstitial.delegate = self
+//        interstitial.load(GADRequest())
+//        return interstitial
+//    }
+//    
+//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+////        print("end")
+////        print(ad)
+//        interstitial = createAndLoadInterstitial()
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "result" {
             let tableViewController = segue.destination as! TableViewController

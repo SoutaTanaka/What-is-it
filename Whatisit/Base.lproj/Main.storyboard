@@ -84,8 +84,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activity" destination="nCx-jS-i6q" id="T01-IA-N5e"/>
-                        <outlet property="adView" destination="b7t-do-B65" id="foa-3j-3aC"/>
-                        <outlet property="bannerView" destination="jLE-Dl-b76" id="ZAK-9d-Aa6"/>
                         <outlet property="images" destination="aoj-Fr-laM" id="ifX-85-RL4"/>
                         <segue destination="epE-zC-DUM" kind="show" identifier="result" id="NSI-wZ-Jph"/>
                     </connections>
@@ -197,7 +195,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="0qx-tT-K81"/>
                     <connections>
-                        <outlet property="bannerView" destination="5lG-5o-M8L" id="Y7W-NQ-kDF"/>
                         <outlet property="tableView" destination="pQv-d1-Hv9" id="ct1-hi-WBG"/>
                         <outlet property="uiimage" destination="vjH-AZ-9U3" id="Anv-cs-5Nh"/>
                     </connections>

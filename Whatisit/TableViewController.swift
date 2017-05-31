@@ -7,14 +7,14 @@
 //
 
 import UIKit
-import GoogleMobileAds
+//import GoogleMobileAds
 import SafariServices
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var uiimage: UIImageView!
-    @IBOutlet var bannerView: GADBannerView!
+//    @IBOutlet var bannerView: GADBannerView!
     var infom: [String] = []
     var proba: [String] = []
     var images: UIImage!
@@ -26,10 +26,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         //        word = "Helloc"
         
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+//        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         //bannerView.adUnitID = "ca-app-pub-4903713163214848/9528507412"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+//        bannerView.rootViewController = self
+//       bannerView.load(GADRequest())
         //tableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "MyCell")
         
         tableView.dataSource = self
