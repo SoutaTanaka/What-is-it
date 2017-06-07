@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet var adView: GADNativeExpressAdView!
     var interstitial: GADInterstitial!
-    let adUnitId = "ca-app-pub-3940256099942544/8897359316"
+    let adUnitId = "ca-app-pub-4903713163214848/2909356615"
     
     
     override func viewDidLoad() {
@@ -51,8 +51,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activity.hidesWhenStopped = true
         activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         
-        images.image = UIImage(named: "pa")
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        images.image = UIImage(named: "Pleas-Select-image-UI.png")
+        bannerView.adUnitID = "ca-app-pub-4903713163214848/7339556217"//ok
         //bannerView.adUnitID = "ca-app-pub-4903713163214848/9528507412"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
@@ -141,7 +141,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // API呼び出し準備
-        let APIKey = "6868e5f2ab3bcc2d57879bd91bfcc8fe9e8a2b09" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
+        let APIKey = "ff8f40dcd5890da6de1d06a2667796ce56cb969f" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
         let url = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + APIKey + "&version=2016-05-20"
         guard let destURL = URL(string: url) else {
             print ("url is NG: " + url) // debugF
@@ -240,7 +240,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4903713163214848/8955890212")//ok
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial

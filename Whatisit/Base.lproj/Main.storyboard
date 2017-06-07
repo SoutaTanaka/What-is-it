@@ -122,7 +122,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pQv-d1-Hv9">
                                 <rect key="frame" x="0.0" y="344" width="375" height="263"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.69647943970000004" green="0.87048578259999998" blue="0.91289883849999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" rowHeight="75" id="DP3-xD-As8" userLabel="MyCell" customClass="CustomTableViewCell" customModule="Whatisit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
