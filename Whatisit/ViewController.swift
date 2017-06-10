@@ -16,13 +16,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var activity: UIActivityIndicatorView!
     //表示するイメージ
     @IBOutlet var images: UIImageView!
-    var selectedimage: UIImage!
+    var selectedimage: UIImage! = nil
     var swith = true
-    
+    var select = false
     var score: Double!
     //テスト用
     //  @IBOutlet var textView: UITextView!
-    var push: Int = 0
+    var push: Int = 3
     //UITableView用の配列
     var information: [String] = []
     var probability: [String] = []
@@ -31,8 +31,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet var adView: GADNativeExpressAdView!
     var interstitial: GADInterstitial!
+    #if DEBUG
+    let adUnitId = "ca-app-pub-3940256099942544/2934735716"
+    #else
     let adUnitId = "ca-app-pub-4903713163214848/2909356615"
-    
+    #endif
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +54,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activity.hidesWhenStopped = true
         activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         
-        images.image = UIImage(named: "Pleas-Select-image-UI.png")
-        bannerView.adUnitID = "ca-app-pub-4903713163214848/7339556217"//ok
+        images.image = UIImage(named: "Pleas-Select-Image-UI.png")
+        #if DEBUG
+            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        #else
+            bannerView.adUnitID = "ca-app-pub-4903713163214848/7339556217"//ok
+        #endif
         //bannerView.adUnitID = "ca-app-pub-4903713163214848/9528507412"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
@@ -67,6 +74,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     //カメラロールから選ぶ
     @IBAction func startimage (){
+        select = true
+        push = push + 1
+        
+        if self.push == 5 {
+            self.interstitial.present(fromRootViewController: self)
+            self.push = 0
+        }
+        
+        
+        
         self.selectFromCameralole()
         bannerView.load(GADRequest())
         adView.load(GADRequest())
@@ -74,6 +91,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     //写真を撮る
     @IBAction func startphoto () {
+        select = true
+        push = push + 1
+        
+        if self.push == 5 {
+            self.interstitial.present(fromRootViewController: self)
+            self.push = 0
+        }
+        
+        
         opencamera()
         bannerView.load(GADRequest())
         adView.load(GADRequest())
@@ -83,19 +109,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         print(swith)
         if swith == true {
             swith = false
-            activity.startAnimating()
+            
             information = []
             probability = []
-            callApi(image: selectedimage)
-            //   self.textView.text = ""
-            push = push + 1
             
-            if self.push == 5 {
-                self.interstitial.present(fromRootViewController: self)
-                self.push = 0
+            if select == false{
+                var alert = UIAlertController(title: "画像解析エラー", message: "画像を選択してください", preferredStyle: UIAlertControllerStyle.alert)
+                var cancel = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: {
+                    (action: UIAlertAction!) in
+                })
+                alert.addAction(cancel)
+                self.present(alert, animated: true, completion: nil)
+                
+            }else{
+                activity.startAnimating()
+                push = push + 1
+                
+                if self.push == 5 {
+                    self.interstitial.present(fromRootViewController: self)
+                    self.push = 0
+                    
+                }
+                callApi(image: selectedimage)
+                
             }
+            //   self.textView.text = ""
             
         }
+        
+        
+        
     }
     
     
@@ -135,13 +178,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //ImagePickerControllerの記述終わり
     
     //IBMにデータを送信するプログラムに関しての記述。
+    
     func callApi(image: UIImage) {
         // print ("canSendData")
         // 解析結果はAppDelegateの変数を経由してSubViewに渡す
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
         // API呼び出し準備
-        let APIKey = "ff8f40dcd5890da6de1d06a2667796ce56cb969f" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
+        let APIKey = "5656a398aa0fb87b9d95e29473ffe15bb1889ce2" // APIKeyを取得してここに記述   捨て垢(yahoo)のものを使用中
         let url = "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/classify?api_key=" + APIKey + "&version=2016-05-20"
         guard let destURL = URL(string: url) else {
             print ("url is NG: " + url) // debugF
@@ -160,6 +204,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             data, response, error in
             
             if error == nil {
+                
                 
                 
                 //                appDelegate.analyzedFaces = self.interpretJson(image: image, json: json)
@@ -225,6 +270,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
         task.resume()
+        
     }
     
     

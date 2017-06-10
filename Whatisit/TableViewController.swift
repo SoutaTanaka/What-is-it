@@ -25,8 +25,11 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         //        word = "Helloc"
         
-        
+        #if DEBUG
+            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+            #else
         bannerView.adUnitID = "ca-app-pub-4903713163214848/6920753815"//ok
+            #endif
         //bannerView.adUnitID = "ca-app-pub-4903713163214848/9528507412"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
