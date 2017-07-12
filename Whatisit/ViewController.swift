@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var images: UIImageView!
     var selectedimage: UIImage! = nil
     var swith = true
-    var select = false
+    
     var score: Double!
     //テスト用
     //  @IBOutlet var textView: UITextView!
@@ -74,7 +74,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     //カメラロールから選ぶ
     @IBAction func startimage (){
-        select = true
         push = push + 1
         
         if self.push == 5 {
@@ -91,7 +90,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     //写真を撮る
     @IBAction func startphoto () {
-        select = true
         push = push + 1
         
         if self.push == 5 {
@@ -107,21 +105,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //データを送る
     @IBAction func sendData () {
         print(swith)
+        if selectedimage == nil{
+            var alert = UIAlertController(title: "画像解析エラー", message: "画像を選択してください", preferredStyle: UIAlertControllerStyle.alert)
+            var cancel = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: {
+                (action: UIAlertAction!) in
+            })
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+            
+        }else{
         if swith == true {
             swith = false
             
             information = []
             probability = []
             
-            if select == false{
-                var alert = UIAlertController(title: "画像解析エラー", message: "画像を選択してください", preferredStyle: UIAlertControllerStyle.alert)
-                var cancel = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: {
-                    (action: UIAlertAction!) in
-                })
-                alert.addAction(cancel)
-                self.present(alert, animated: true, completion: nil)
-                
-            }else{
+            
                 activity.startAnimating()
                 push = push + 1
                 
