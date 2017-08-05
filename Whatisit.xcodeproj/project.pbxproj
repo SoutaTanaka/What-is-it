@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		05068C491EEAA42100B19F76 /* Pleas-Select-Image-UI.png in Resources */ = {isa = PBXBuildFile; fileRef = 05068C481EEAA42100B19F76 /* Pleas-Select-Image-UI.png */; };
+		0513270C1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513270A1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png */; };
+		0513270F1F359FA40024020B /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0513270E1F359FA40024020B /* CViewController.swift */; };
+		051327131F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png in Resources */ = {isa = PBXBuildFile; fileRef = 051327121F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png */; };
 		051F92A21E922AE90085F340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051F92A11E922AE90085F340 /* AppDelegate.swift */; };
 		051F92A41E922AE90085F340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051F92A31E922AE90085F340 /* ViewController.swift */; };
 		051F92A71E922AE90085F340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051F92A51E922AE90085F340 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 		05339C5E1E936E4C0034C623 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */; };
 		0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0533BFA31ED2AF1200143854 /* 名称未設定-3.png */; };
 		056286051E94D59F0053B3BD /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 056286041E94D59F0053B3BD /* ios */; };
+		056FEEC01F35746F0002DD17 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FEEBF1F35746F0002DD17 /* PageViewController.swift */; };
+		056FEEC21F3574900002DD17 /* TFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FEEC11F3574900002DD17 /* TFirstViewController.swift */; };
+		056FEEC41F3574A90002DD17 /* TSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FEEC31F3574A90002DD17 /* TSecondViewController.swift */; };
 		0585B5F41EF154DC00282C9A /* bar-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0585B5F31EF154DC00282C9A /* bar-image.png */; };
 		05DD3E451E937A1B004BF1E6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD3E441E937A1B004BF1E6 /* TableViewController.swift */; };
 		05F87B1B1ECC5B520013A500 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F87B1A1ECC5B520013A500 /* SafariServices.framework */; };
@@ -46,6 +52,9 @@
 
 /* Begin PBXFileReference section */
 		05068C481EEAA42100B19F76 /* Pleas-Select-Image-UI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pleas-Select-Image-UI.png"; sourceTree = "<group>"; };
+		0513270A1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator-Screen-Shot-2017.06.07-19.14.29.png"; sourceTree = "<group>"; };
+		0513270E1F359FA40024020B /* CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		051327121F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator-Screen-Shot-2017.07.12-19.51.38.png"; sourceTree = "<group>"; };
 		051F929E1E922AE90085F340 /* Whatisit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatisit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		051F92A11E922AE90085F340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		051F92A31E922AE90085F340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +72,9 @@
 		05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0533BFA31ED2AF1200143854 /* 名称未設定-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "名称未設定-3.png"; sourceTree = "<group>"; };
 		056286041E94D59F0053B3BD /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
+		056FEEBF1F35746F0002DD17 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		056FEEC11F3574900002DD17 /* TFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFirstViewController.swift; path = ../TFirstViewController.swift; sourceTree = "<group>"; };
+		056FEEC31F3574A90002DD17 /* TSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSecondViewController.swift; sourceTree = "<group>"; };
 		0585B5F31EF154DC00282C9A /* bar-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-image.png"; sourceTree = "<group>"; };
 		05DD3E441E937A1B004BF1E6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		05F87B1A1ECC5B520013A500 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
@@ -131,6 +143,8 @@
 		051F92A01E922AE90085F340 /* Whatisit */ = {
 			isa = PBXGroup;
 			children = (
+				051327121F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png */,
+				0513270A1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png */,
 				0533BFA31ED2AF1200143854 /* 名称未設定-3.png */,
 				0585B5F31EF154DC00282C9A /* bar-image.png */,
 				05068C481EEAA42100B19F76 /* Pleas-Select-Image-UI.png */,
@@ -144,6 +158,10 @@
 				051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */,
 				05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */,
 				05DD3E441E937A1B004BF1E6 /* TableViewController.swift */,
+				056FEEBF1F35746F0002DD17 /* PageViewController.swift */,
+				056FEEC11F3574900002DD17 /* TFirstViewController.swift */,
+				056FEEC31F3574A90002DD17 /* TSecondViewController.swift */,
+				0513270E1F359FA40024020B /* CViewController.swift */,
 			);
 			path = Whatisit;
 			sourceTree = "<group>";
@@ -307,7 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */,
+				0513270C1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png in Resources */,
 				051F92AC1E922AE90085F340 /* LaunchScreen.storyboard in Resources */,
+				051327131F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png in Resources */,
 				051F92D01E922C7A0085F340 /* GoogleService-Info.plist in Resources */,
 				051F92A91E922AE90085F340 /* Assets.xcassets in Resources */,
 				05068C491EEAA42100B19F76 /* Pleas-Select-Image-UI.png in Resources */,
@@ -461,9 +481,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056FEEC41F3574A90002DD17 /* TSecondViewController.swift in Sources */,
 				051F92A41E922AE90085F340 /* ViewController.swift in Sources */,
+				0513270F1F359FA40024020B /* CViewController.swift in Sources */,
+				056FEEC01F35746F0002DD17 /* PageViewController.swift in Sources */,
 				05339C5E1E936E4C0034C623 /* CustomTableViewCell.swift in Sources */,
 				051F92A21E922AE90085F340 /* AppDelegate.swift in Sources */,
+				056FEEC21F3574900002DD17 /* TFirstViewController.swift in Sources */,
 				05DD3E451E937A1B004BF1E6 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

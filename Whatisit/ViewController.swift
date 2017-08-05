@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var images: UIImageView!
     var selectedimage: UIImage! = nil
     var swith = true
+    var tutur: [UIImage] = []
+   
     
     var score: Double!
     //テスト用
@@ -39,6 +41,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.06.07-19.14.29.png"))
+        tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.07.12-19.51.38.png"))
         admob()
         
         adView.adUnitID = adUnitId
@@ -303,6 +307,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             tableViewController.proba = probability
             tableViewController.images = selectedimage
         }
+        
+    }
+    
+    @IBAction func exit (fooooooooooooooooooo: UIStoryboardSegue){
         
     }
     

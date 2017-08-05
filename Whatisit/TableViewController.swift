@@ -69,4 +69,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         tableView.reloadData()
     }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
 }
