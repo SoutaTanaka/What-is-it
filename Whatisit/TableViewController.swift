@@ -59,6 +59,14 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomTableViewCell
         cell.info.text = infom[indexPath.row]
         cell.sc.text = proba[indexPath.row]
+        //Realm
+        let informs:InfomationData = InfomationData()
+        informs.ID = self.infom[0]
+        informs.img = self.images
+        let dataInfo: Infoprob = Infoprob()
+        dataInfo.info = infom[indexPath.row]
+        dataInfo.prob = infom[indexPath.row]
+        informs.inf.append(dataInfo)
         return cell
     }
     //tableviewが押された時の処理

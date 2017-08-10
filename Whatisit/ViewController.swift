@@ -19,7 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var selectedimage: UIImage! = nil
     var swith = true
     var tutur: [UIImage] = []
-   
+    
     
     var score: Double!
     //テスト用
@@ -46,15 +46,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if ud.bool(forKey: "firstLaunch") {
             
             // 初回起動時の処理
-           performSegue(withIdentifier: "Tutur", sender: nil)
+            performSegue(withIdentifier: "Tutur", sender: nil)
             // 2回目以降の起動では「firstLaunch」のkeyをfalseに
             ud.set(false, forKey: "firstLaunch")
             
         }
-
         
         
-         tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.06.07-19.14.29.png"))
+        
+        tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.06.07-19.14.29.png"))
         tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.07.12-19.51.38.png"))
         admob()
         
@@ -131,13 +131,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.present(alert, animated: true, completion: nil)
             
         }else{
-        if swith == true {
-            swith = false
-            
-            information = []
-            probability = []
-            
-            
+            if swith == true {
+                swith = false
+                
+                information = []
+                probability = []
+                
+                
                 activity.startAnimating()
                 push = push + 1
                 
@@ -317,13 +317,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "result" {
             let tableViewController = segue.destination as! TableViewController
-            let historyViewController = segue.destination as! HistoryViewController
             tableViewController.infom = information
             tableViewController.proba = probability
             tableViewController.images = selectedimage
-            historyViewController.info.append(information[0])
-            historyViewController.prob.append(probability[0])
-            historyViewController.photos.append(selectedimage)
         }
         
     }
@@ -332,10 +328,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-       
-    
-
 }
-
 
 
