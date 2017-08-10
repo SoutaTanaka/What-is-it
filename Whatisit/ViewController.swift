@@ -41,6 +41,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ud = UserDefaults.standard
+        if ud.bool(forKey: "firstLaunch") {
+            
+            // 初回起動時の処理
+           performSegue(withIdentifier: "Tutur", sender: nil)
+            // 2回目以降の起動では「firstLaunch」のkeyをfalseに
+            ud.set(false, forKey: "firstLaunch")
+            
+        }
+
+        
+        
          tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.06.07-19.14.29.png"))
         tutur.append(#imageLiteral(resourceName: "Simulator-Screen-Shot-2017.07.12-19.51.38.png"))
         admob()
@@ -300,12 +313,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         print(ad)
         interstitial = createAndLoadInterstitial()
     }
+    //データの送信
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "result" {
             let tableViewController = segue.destination as! TableViewController
+            let historyViewController = segue.destination as! HistoryViewController
             tableViewController.infom = information
             tableViewController.proba = probability
             tableViewController.images = selectedimage
+            historyViewController.info.append(information[0])
+            historyViewController.prob.append(probability[0])
+            historyViewController.photos.append(selectedimage)
         }
         
     }
@@ -314,16 +332,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    //    func nativeExpressAdViewDidReceiveAd(_ nativeExpressAdView: GADNativeExpressAdView) {
-    //        if adView.videoController.hasVideoContent() {
-    //            print("Received an ad with a video asset.")
-    //        } else {
-    //            print("Received an ad without a video asset.")
-    //        }
-    //    }
-    //    func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {
-    //        print("The video asset has completed playback.")
-    //    }
+       
+    
+
 }
 
 

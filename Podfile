@@ -8,6 +8,8 @@ target 'Whatisit' do
     pod 'Firebase/Core'
     pod 'Firebase/AdMob'
     pod 'SwiftyJSON'
+    pod 'Realm'
+    pod 'RealmSwift'
     # Pods for Whatisit
     
     target 'WhatisitTests' do

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05054DC31F3A9BC10036841D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05054DC21F3A9BC10036841D /* HistoryViewController.swift */; };
+		05054DC51F3AE6210036841D /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05054DC41F3AE6210036841D /* HistoryTableViewCell.swift */; };
 		05068C491EEAA42100B19F76 /* Pleas-Select-Image-UI.png in Resources */ = {isa = PBXBuildFile; fileRef = 05068C481EEAA42100B19F76 /* Pleas-Select-Image-UI.png */; };
 		0513270C1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png in Resources */ = {isa = PBXBuildFile; fileRef = 0513270A1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png */; };
 		0513270F1F359FA40024020B /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0513270E1F359FA40024020B /* CViewController.swift */; };
@@ -27,6 +29,7 @@
 		056FEEC41F3574A90002DD17 /* TSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FEEC31F3574A90002DD17 /* TSecondViewController.swift */; };
 		0585B5F41EF154DC00282C9A /* bar-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0585B5F31EF154DC00282C9A /* bar-image.png */; };
 		05DD3E451E937A1B004BF1E6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DD3E441E937A1B004BF1E6 /* TableViewController.swift */; };
+		05F6E6C61F36B82E00285FE2 /* batu.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F6E6C51F36B82E00285FE2 /* batu.png */; };
 		05F87B1B1ECC5B520013A500 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F87B1A1ECC5B520013A500 /* SafariServices.framework */; };
 		5A767EEA876ED5E9AEC6B708 /* Pods_WhatisitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD72AEA9BB3C1B674C16C9EF /* Pods_WhatisitUITests.framework */; };
 		63ACAB810C7C8747988E2BF7 /* Pods_WhatisitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F8D1F8AC9084D065A3F938 /* Pods_WhatisitTests.framework */; };
@@ -51,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05054DC21F3A9BC10036841D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		05054DC41F3AE6210036841D /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		05068C481EEAA42100B19F76 /* Pleas-Select-Image-UI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pleas-Select-Image-UI.png"; sourceTree = "<group>"; };
 		0513270A1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator-Screen-Shot-2017.06.07-19.14.29.png"; sourceTree = "<group>"; };
 		0513270E1F359FA40024020B /* CViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		056FEEC31F3574A90002DD17 /* TSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSecondViewController.swift; sourceTree = "<group>"; };
 		0585B5F31EF154DC00282C9A /* bar-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-image.png"; sourceTree = "<group>"; };
 		05DD3E441E937A1B004BF1E6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		05F6E6C51F36B82E00285FE2 /* batu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batu.png; sourceTree = "<group>"; };
 		05F87B1A1ECC5B520013A500 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		0F49527E375B56D1149E1776 /* Pods-Whatisit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatisit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whatisit/Pods-Whatisit.debug.xcconfig"; sourceTree = "<group>"; };
 		356B8A8842206AA6CAC1AD48 /* Pods_Whatisit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whatisit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +149,7 @@
 		051F92A01E922AE90085F340 /* Whatisit */ = {
 			isa = PBXGroup;
 			children = (
+				05F6E6C51F36B82E00285FE2 /* batu.png */,
 				051327121F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png */,
 				0513270A1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png */,
 				0533BFA31ED2AF1200143854 /* 名称未設定-3.png */,
@@ -162,6 +169,8 @@
 				056FEEC11F3574900002DD17 /* TFirstViewController.swift */,
 				056FEEC31F3574A90002DD17 /* TSecondViewController.swift */,
 				0513270E1F359FA40024020B /* CViewController.swift */,
+				05054DC21F3A9BC10036841D /* HistoryViewController.swift */,
+				05054DC41F3AE6210036841D /* HistoryTableViewCell.swift */,
 			);
 			path = Whatisit;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 				051F92BA1E922AE90085F340 /* Frameworks */,
 				051F92BB1E922AE90085F340 /* Resources */,
 				44968BE72D3B338A7DC6284C /* [CP] Copy Pods Resources */,
+				E1BD07FBDE12A2959BC859A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,6 +337,7 @@
 				0533BFA41ED2AF1200143854 /* 名称未設定-3.png in Resources */,
 				0513270C1F359E250024020B /* Simulator-Screen-Shot-2017.06.07-19.14.29.png in Resources */,
 				051F92AC1E922AE90085F340 /* LaunchScreen.storyboard in Resources */,
+				05F6E6C61F36B82E00285FE2 /* batu.png in Resources */,
 				051327131F35A16E0024020B /* Simulator-Screen-Shot-2017.07.12-19.51.38.png in Resources */,
 				051F92D01E922C7A0085F340 /* GoogleService-Info.plist in Resources */,
 				051F92A91E922AE90085F340 /* Assets.xcassets in Resources */,
@@ -360,9 +371,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Whatisit/Pods-Whatisit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -405,13 +427,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whatisit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8A54FE018733E6D4DF7508E7 /* [CP] Check Pods Manifest.lock */ = {
@@ -420,13 +445,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatisitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9324E35B59FDDD7457AFCE8A /* [CP] Check Pods Manifest.lock */ = {
@@ -435,13 +463,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatisitUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97709E52D0914C79C7C1ED51 /* [CP] Copy Pods Resources */ = {
@@ -474,6 +505,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatisitTests/Pods-WhatisitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E1BD07FBDE12A2959BC859A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatisitUITests/Pods-WhatisitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -484,9 +530,11 @@
 				056FEEC41F3574A90002DD17 /* TSecondViewController.swift in Sources */,
 				051F92A41E922AE90085F340 /* ViewController.swift in Sources */,
 				0513270F1F359FA40024020B /* CViewController.swift in Sources */,
+				05054DC51F3AE6210036841D /* HistoryTableViewCell.swift in Sources */,
 				056FEEC01F35746F0002DD17 /* PageViewController.swift in Sources */,
 				05339C5E1E936E4C0034C623 /* CustomTableViewCell.swift in Sources */,
 				051F92A21E922AE90085F340 /* AppDelegate.swift in Sources */,
+				05054DC31F3A9BC10036841D /* HistoryViewController.swift in Sources */,
 				056FEEC21F3574900002DD17 /* TFirstViewController.swift in Sources */,
 				05DD3E451E937A1B004BF1E6 /* TableViewController.swift in Sources */,
 			);
