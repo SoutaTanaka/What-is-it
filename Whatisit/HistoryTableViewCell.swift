@@ -10,5 +10,5 @@ import UIKit
 
 class HistoryTablseViewCell: UITableViewCell {
     @IBOutlet var label: UILabel!
-    @IBOutlet var imege: UIImage!
+    @IBOutlet var imege: UIImageView!
 }

@@ -10,6 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SafariServices
 import Social
+import RealmSwift
 
 class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //解析結果の表示用TableView
@@ -45,6 +46,12 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.reloadData()
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("table view \(infom)")
+        uiimage.image = images
+        tableView.reloadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,14 +66,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomTableViewCell
         cell.info.text = infom[indexPath.row]
         cell.sc.text = proba[indexPath.row]
-        //Realm
-        let informs:InfomationData = InfomationData()
-        informs.ID = self.infom[0]
-        informs.img = self.images
-        let dataInfo: Infoprob = Infoprob()
-        dataInfo.info = infom[indexPath.row]
-        dataInfo.prob = infom[indexPath.row]
-        informs.inf.append(dataInfo)
+
         return cell
     }
     //tableviewが押された時の処理
@@ -125,10 +125,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 composeViewController.setInitialText(self.word)
                 composeViewController.add(self.images)
-
+                
                 
                 self.present(composeViewController, animated: true, completion: nil)
-                 
+                
             })
             
             let twitter: UIAlertAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
@@ -157,5 +157,6 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         present(action, animated: true, completion: nil)
         
     }
+    
     
 }

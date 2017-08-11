@@ -10,6 +10,7 @@ import UIKit
 import Photos
 import SwiftyJSON
 import GoogleMobileAds
+import RealmSwift
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, GADInterstitialDelegate, GADNativeExpressAdViewDelegate, GADVideoControllerDelegate {
     //くるくる回るやつ( UIActivityIndicatorView)
@@ -240,29 +241,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         var classes : Dictionary = ["class": String(), "score": Float()] as [String : Any]
                         
                         classes["class"] =  json["images"][0]["classifiers"][0]["classes"][0]["class"].string
+                        //Realm
+                        let informs:InfomationData = InfomationData()
+                        
+                        informs.img = UIImagePNGRepresentation(self.selectedimage)
+                        
+                        
                         
                         for i in 0...20 {
+                           
                             
                             let textClasses =  json["images"][0]["classifiers"][0]["classes"][i]["class"].stringValue
                             let textScore = json["images"][0]["classifiers"][0]["classes"][i]["score"].stringValue
-                            
-                            if textClasses != "" {
-                                self.information.append(textClasses)
-                                self.score = atof(textScore)
-                                self.score = self.score * 100000000000000
-                                self.score = self.score / 1000000000000
-                                // print (self.score)
-                                self.probability.append(String(self.score))
-                                //   self.textView.text  = self.textView.text + "[\(textClasses),\(textScore )],"
-                                // self.textView.text  = "[\(textClasses),\(textScore )],"
-                                // print( "classes[class]:\(classes["class"]!)")
+                            if textClasses != nil {
+                                 let dataInfo: Infoprob = Infoprob()
+                                dataInfo.info = textClasses
                                 
-                                dataStr = classes["class"] as! String?
-                                //print( " dataStr:\(String(describing:  dataStr))")
-                                //print( " dataStr:\(String(describing:  dataStr))")
+                                if textClasses != "" {
+                                    self.information.append(textClasses)
+                                    self.score = atof(textScore)
+                                    self.score = self.score * 100000000000000
+                                    self.score = self.score / 1000000000000
+                                    dataInfo.prob = String(self.score)
+                                    // print (self.score)
+                                    self.probability.append(String(self.score))
+                                    
+                                    //   self.textView.text  = self.textView.text + "[\(textClasses),\(textScore )],"
+                                    // self.textView.text  = "[\(textClasses),\(textScore )],"
+                                    // print( "classes[class]:\(classes["class"]!)")
+                                    
+                                    dataStr = classes["class"] as! String?
+                                    //print( " dataStr:\(String(describing:  dataStr))")
+                                    //print( " dataStr:\(String(describing:  dataStr))")
+                                    informs.inf.append(dataInfo)
+                                }
                             }
                             
                         }
+                        informs.ID = self.information[0]
+                        let realms = try! Realm()
+                        try! realms.write {
+                            realms.add(informs)
+                        }
+                        print(informs)
+                        
                         //                        print (self.information)
                         //                        print(self.probability)
                         self.activity.stopAnimating()
