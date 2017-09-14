@@ -21,15 +21,15 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
     }
+    let realm = try! Realm()
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         photos = []
         info = []
         infos = []
         prob = []
+        var datas = realm.objects(InfomationData.self)
         
-        let realm = try! Realm()
-        let datas = realm.objects(InfomationData.self)
         for i in 0 ..< datas.count {
             photos.append(UIImage(data: datas[i].img)!)
             info.append(datas[i].ID)
@@ -72,7 +72,25 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         performSegue(withIdentifier: "SecondView", sender: nil)
         tableView.reloadData()
     }
-    
+    //ここ
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        var datas = realm.objects(InfomationData.self)
+        if editingStyle == .delete {
+            info.remove(at: indexPath.row)
+            infos.remove(at: indexPath.row)
+            prob.remove(at: indexPath.row)
+            photos.remove(at: indexPath.row)
+            
+            let data = datas[indexPath.row]
+                try! realm.write {
+                    realm.delete(data)
+                }
+            
+            tableView.reloadData()
+            
+        }
+    }
+    //Hey
     override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SecondView" {
             let tableViewController = segue.destination as! TableViewController

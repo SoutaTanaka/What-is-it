@@ -79,6 +79,7 @@
 		051F92CF1E922C7A0085F340 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05339C5D1E936E4C0034C623 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0533BFA31ED2AF1200143854 /* 名称未設定-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "名称未設定-3.png"; sourceTree = "<group>"; };
+		055BC8AD1F6AC19E0097AD4D /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		056286041E94D59F0053B3BD /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
 		056EC7D41F3C287D00B3F943 /* RealmClassConreoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmClassConreoller.swift; sourceTree = "<group>"; };
 		056EC7D61F3C28C900B3F943 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Library/Developer/Xcode/DerivedData/Whatisit-avupuejeaepiladjlvyvyhegkefi/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 				0533BFA31ED2AF1200143854 /* 名称未設定-3.png */,
 				0585B5F31EF154DC00282C9A /* bar-image.png */,
 				05068C481EEAA42100B19F76 /* Pleas-Select-Image-UI.png */,
+				055BC8AD1F6AC19E0097AD4D /* default.png */,
 				056286041E94D59F0053B3BD /* ios */,
 				051F92A11E922AE90085F340 /* AppDelegate.swift */,
 				051F92A31E922AE90085F340 /* ViewController.swift */,
@@ -496,9 +498,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Whatisit/Pods-Whatisit-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

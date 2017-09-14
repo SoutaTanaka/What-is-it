@@ -115,38 +115,52 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let sher: UIAlertAction = UIAlertAction(title: "シェア", style: UIAlertActionStyle.default, handler:{
             (action:UIAlertAction!) -> Void in
             //シェアが押された時の処理
-            //alertを作成
-            let alert: UIAlertController = UIAlertController(title: "SNSを選択", message: "SNSを選択", preferredStyle: UIAlertControllerStyle.actionSheet)
-            //facebookボタン
-            let faceBook: UIAlertAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
-                //facebookが選択された時の処理
-                
-                
-                let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                composeViewController.setInitialText(self.word)
-                composeViewController.add(self.images)
-                
-                
-                self.present(composeViewController, animated: true, completion: nil)
-                
-            })
             
-            let twitter: UIAlertAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
-                //Twitterが選択された時の処理
-                
-                let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                composeViewController.setInitialText(self.word)
-                composeViewController.add(self.images)
-                
-                self.present(composeViewController, animated: true, completion: nil)
-                
-                
-            })
-            //表示内容の追加
-            alert.addAction(faceBook)
-            alert.addAction(twitter)
-            //ActionSeetの設定
-            self.present(alert, animated: true, completion: nil)
+            self.pushActivityButton()
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            //alertを作成
+//            let alert: UIAlertController = UIAlertController(title: "SNSを選択", message: "SNSを選択", preferredStyle: UIAlertControllerStyle.actionSheet)
+//            //facebookボタン
+//            let faceBook: UIAlertAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
+//                //facebookが選択された時の処理
+//
+//
+//                let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+//                composeViewController.setInitialText(self.word)
+//                composeViewController.add(self.images)
+//
+//
+//                self.present(composeViewController, animated: true, completion: nil)
+//
+//            })
+//
+//            let twitter: UIAlertAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
+//                //Twitterが選択された時の処理
+//
+//                let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+//                composeViewController.setInitialText(self.word)
+//                composeViewController.add(self.images)
+//
+//                self.present(composeViewController, animated: true, completion: nil)
+//
+//
+//            })
+//            //表示内容の追加
+//            alert.addAction(faceBook)
+//            alert.addAction(twitter)
+//            //ActionSeetの設定
+//            self.present(alert, animated: true, completion: nil)
         })
         
         //表示内容の追加
@@ -158,5 +172,18 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
-    
+    func pushActivityButton() {
+        
+        let texto = self.word + " What is it で作成" + " https://itunes.apple.com/US/app/id1242896457?mt=8"
+        let imageeee = self.images
+        let items: [Any] = [texto, imageeee]
+        
+        // UIActivityViewControllerをインスタンス化
+        let activityVc = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        
+        
+        
+        // UIAcitivityViewControllerを表示
+        self.present(activityVc, animated: true, completion: nil)
+    }
 }

@@ -292,28 +292,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                         self.swith = true
                         self.bannerView.load(GADRequest())
                     }
-                    
-                    
-                    
-                    
                 )
-                
                 // アニメーションの設定
                 // navi.modalTransitionStyle = .coverVertical
-                
-                
             } else {
                 // APIレスポンス：エラー
                 print(error.debugDescription)   // debug
             }
         }
         task.resume()
-        
     }
-    
-    
-    
-    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -322,14 +310,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         interstitial = createAndLoadInterstitial()
         // Set up a new game.
     }
-    
     func createAndLoadInterstitial() -> GADInterstitial {
         let interstitial = GADInterstitial(adUnitID: "ca-app-pub-4903713163214848/8955890212")//ok
         interstitial.delegate = self
         interstitial.load(GADRequest())
         return interstitial
     }
-    
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         print("end")
         print(ad)
@@ -343,13 +329,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             tableViewController.proba = probability
             tableViewController.images = selectedimage
         }
-        
     }
-    
     @IBAction func exit (fooooooooooooooooooo: UIStoryboardSegue){
-        
     }
-    
 }
-
-
