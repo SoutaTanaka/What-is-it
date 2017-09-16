@@ -42,8 +42,11 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         tableView.dataSource = self
+        //imageに
         uiimage.image = images
+        //tableViewの読み込み
         tableView.reloadData()
+        
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -66,7 +69,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomTableViewCell
         cell.info.text = infom[indexPath.row]
         cell.sc.text = proba[indexPath.row]
-
+        
         return cell
     }
     //tableviewが押された時の処理
@@ -115,67 +118,28 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let sher: UIAlertAction = UIAlertAction(title: "シェア", style: UIAlertActionStyle.default, handler:{
             (action:UIAlertAction!) -> Void in
             //シェアが押された時の処理
-            
+            //ActivityViewControllerを呼び出し
             self.pushActivityButton()
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            //alertを作成
-//            let alert: UIAlertController = UIAlertController(title: "SNSを選択", message: "SNSを選択", preferredStyle: UIAlertControllerStyle.actionSheet)
-//            //facebookボタン
-//            let faceBook: UIAlertAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
-//                //facebookが選択された時の処理
-//
-//
-//                let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-//                composeViewController.setInitialText(self.word)
-//                composeViewController.add(self.images)
-//
-//
-//                self.present(composeViewController, animated: true, completion: nil)
-//
-//            })
-//
-//            let twitter: UIAlertAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) -> Void in
-//                //Twitterが選択された時の処理
-//
-//                let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-//                composeViewController.setInitialText(self.word)
-//                composeViewController.add(self.images)
-//
-//                self.present(composeViewController, animated: true, completion: nil)
-//
-//
-//            })
-//            //表示内容の追加
-//            alert.addAction(faceBook)
-//            alert.addAction(twitter)
-//            //ActionSeetの設定
-//            self.present(alert, animated: true, completion: nil)
         })
         
         //表示内容の追加
+        //キャンセルボタン
         action.addAction(cancelAction)
+        //google検索
         action.addAction(sarthi)
+        //シェアボタン
         action.addAction(sher)
         //ActionSeetの設定
         present(action, animated: true, completion: nil)
         
     }
-    
+    //ActivityViewControllerの関数
     func pushActivityButton() {
-        
+        //シェアする内容を設定
         let texto = self.word + " What is it で作成" + " https://itunes.apple.com/US/app/id1242896457?mt=8"
         let imageeee = self.images
+        //itemsにシェアする内容を入れる
         let items: [Any] = [texto, imageeee]
         
         // UIActivityViewControllerをインスタンス化

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//結果表示画面のCutomCell
 class CustomTableViewCell:  UITableViewCell{
     @IBOutlet var info: UILabel!
     @IBOutlet var sc: UILabel!

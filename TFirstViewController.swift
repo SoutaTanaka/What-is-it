@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//チュートリアル画面でステータスバーを非表示にする
 class TFirstViewController: UIViewController {
 
     override func viewDidLoad() {

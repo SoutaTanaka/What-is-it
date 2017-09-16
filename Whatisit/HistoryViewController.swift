@@ -11,11 +11,14 @@ import RealmSwift
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
+    //変数の宣言
     var info: [String] = []
     var infos: [[String]] = []
     var prob: [[String]] = []
     var photos: [UIImage] = []
+    //タップされたセル番号を一時的に入れておくための変数
     var number: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

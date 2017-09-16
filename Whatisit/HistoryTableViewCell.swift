@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//履歴表示用のCustomCell
 class HistoryTablseViewCell: UITableViewCell {
     @IBOutlet var label: UILabel!
     @IBOutlet var imege: UIImageView!
