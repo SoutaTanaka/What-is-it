@@ -78,10 +78,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
             return pageViewControllers[index!+1]
         }
     }
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
+//    
     
 }
 

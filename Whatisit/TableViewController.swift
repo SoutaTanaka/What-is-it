@@ -83,10 +83,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.reloadData()
     }
     //ステータスバーの表示設定
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
+//    
     //TableViewが押された時に表示するActionSheet
     func action (){
         //ActionSeetの作成

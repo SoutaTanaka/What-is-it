@@ -298,9 +298,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         task.resume()
     }
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
     //広告の関数
     fileprivate func admob() {
         interstitial = createAndLoadInterstitial()
