@@ -24,14 +24,16 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
     let realm = try! Realm()
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         photos = []
         info = []
         infos = []
         prob = []
-        var datas = realm.objects(InfomationData.self)
+        let datas = realm.objects(InfomationData.self)
         
         for i in 0 ..< datas.count {
             photos.append(UIImage(data: datas[i].img)!)

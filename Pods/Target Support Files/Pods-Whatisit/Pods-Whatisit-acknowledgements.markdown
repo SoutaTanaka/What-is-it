@@ -3,23 +3,23 @@ This application makes use of the following third party libraries:
 
 ## Firebase
 
-Copyright 2017 Google
+Copyright 2018 Google
 
 ## FirebaseAnalytics
 
-Copyright 2017 Google
+Copyright 2018 Google
 
 ## FirebaseCore
 
-Copyright 2017 Google
+Copyright 2018 Google
 
 ## FirebaseInstanceID
 
-Copyright 2017 Google
+Copyright 2018 Google
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2017 Google
+Copyright 2018 Google
 
 ## GoogleToolboxForMac
 
@@ -735,7 +735,7 @@ regulations.
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Ruoyu Fu
+Copyright (c) 2017 Ruoyu Fu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

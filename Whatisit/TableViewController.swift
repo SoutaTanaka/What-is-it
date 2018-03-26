@@ -137,7 +137,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     //ActivityViewControllerの関数
     func pushActivityButton() {
         //シェアする内容を設定
-        let texto = self.word + " What is it で作成" + " https://itunes.apple.com/US/app/id1242896457?mt=8"
+        let texto = self.word + " What is it で作成"
         let imageeee = self.images
         //itemsにシェアする内容を入れる
         let items: [Any] = [texto, imageeee]
